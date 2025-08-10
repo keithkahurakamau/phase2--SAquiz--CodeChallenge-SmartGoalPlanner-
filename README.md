@@ -71,3 +71,18 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# 1) Clone and install
+git clone <YOUR_REPO_URL>
+cd <YOUR_PROJECT_DIR>
+npm i
+
+# 2) Start the mock API (Terminal 1)
+npx json-server --watch db.json --port 3000
+
+# 3) Start the web app (Terminal 2, in project dir)
+npm run dev
+# open http://localhost:8080
+
+# 4) Build & preview (optional)
+npm run build
+npm run preview

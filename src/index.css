@@ -27,67 +27,67 @@
  */
 
 @layer base {
-  /* Light Theme Color Scheme */
+  /* Light Theme Color Scheme - Minimalist Premium Palette */
   :root {
-    /* Core Background & Text Colors */
-    --background: 210 100% 98%; /* Very light blue background */
-    --foreground: 222.2 84% 4.9%; /* Dark text for high contrast */
+    /* Core Background & Text Colors - Blue Background */
+    --background: 210 70% 95%; /* Light blue background */
+    --foreground: 220 10% 10%; /* Charcoal text for contrast */
 
-    /* Card Component Colors */
-    --card: 0 0% 100%; /* White card backgrounds */
-    --card-foreground: 222.2 84% 4.9%; /* Dark text on cards */
+    /* Card Component Colors - Clean & Minimal */
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 220 10% 10%; /* Charcoal text on cards */
 
-    /* Popover/Modal Colors */
+    /* Popover/Modal Colors - Subtle & Refined */
     --popover: 0 0% 100%; /* White popover backgrounds */
-    --popover-foreground: 222.2 84% 4.9%; /* Dark text in popovers */
+    --popover-foreground: 220 10% 10%; /* Charcoal text in popovers */
 
-    /* Primary Action Colors */
-    --primary: 222.2 47.4% 11.2%; /* Dark blue-gray for primary actions */
-    --primary-foreground: 210 40% 98%; /* Light text on primary actions */
+    /* Primary Action Colors - Sophisticated Charcoal */
+    --primary: 220 10% 15%; /* Deep charcoal for primary actions */
+    --primary-foreground: 0 0% 100%; /* White text on primary actions */
 
-    /* Secondary/Accent Colors */
-    --secondary: 210 40% 96.1%; /* Light gray for secondary elements */
-    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark text on secondary */
+    /* Secondary/Accent Colors - Muted Warm Gray */
+    --secondary: 220 10% 96%; /* Very light warm gray */
+    --secondary-foreground: 220 10% 15%; /* Charcoal text on secondary */
 
-    /* Muted/Disabled State Colors */
-    --muted: 210 40% 96.1%; /* Light gray for muted elements */
-    --muted-foreground: 215.4 16.3% 46.9%; /* Medium gray text */
+    /* Muted/Disabled State Colors - Subtle Gray */
+    --muted: 220 10% 96%; /* Light warm gray */
+    --muted-foreground: 220 10% 45%; /* Medium gray text */
 
-    /* Accent Colors for Highlights */
-    --accent: 210 40% 96.1%; /* Light gray accent */
-    --accent-foreground: 222.2 47.4% 11.2%; /* Dark text on accents */
+    /* Accent Colors - Sophisticated Navy */
+    --accent: 220 15% 25%; /* Muted navy accent */
+    --accent-foreground: 0 0% 100%; /* White text on accents */
 
-    /* Destructive/Error Colors */
-    --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
-    --destructive-foreground: 210 40% 98%; /* Light text on destructive */
+    /* Destructive/Error Colors - Muted Red */
+    --destructive: 0 50% 50%; /* Muted red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* White text on destructive */
 
-    /* Border & Input Field Colors */
-    --border: 214.3 31.8% 91.4%; /* Light gray borders */
-    --input: 214.3 31.8% 91.4%; /* Light gray input backgrounds */
-    --ring: 222.2 84% 4.9%; /* Focus ring color */
+    /* Border & Input Field Colors - Subtle Gray */
+    --border: 220 10% 90%; /* Light warm gray borders */
+    --input: 0 0% 100%; /* White input backgrounds */
+    --ring: 220 10% 15%; /* Charcoal focus ring */
 
-    /* Border Radius Tokens */
-    --radius: 0.5rem; /* Standard border radius */
+    /* Border Radius Tokens - Slightly Reduced for Premium Feel */
+    --radius: 0.375rem; /* Refined border radius */
 
-    /* Brand & Status Tokens */
-    --brand: 164 60% 40%; /* Teal brand color */
-    --brand-foreground: 210 40% 98%; /* Light text on brand color */
-    --success: 142 72% 33%; /* Green for success states */
-    --warning: 38 92% 50%; /* Orange for warning states */
+    /* Brand & Status Tokens - Sophisticated Navy */
+    --brand: 220 15% 25%; /* Muted navy brand color */
+    --brand-foreground: 0 0% 100%; /* White text on brand color */
+    --success: 142 30% 40%; /* Muted green for success states */
+    --warning: 38 30% 50%; /* Muted amber for warning states */
 
-    /* Gradients & Shadow Tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--primary)) 100%);
-    --shadow-elegant: 0 10px 25px -8px hsl(var(--brand) / 0.25);
+    /* Gradients & Shadow Tokens - Subtle & Elegant */
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 25%) 0%, hsl(220 10% 15%) 100%);
+    --shadow-elegant: 0 4px 20px -4px hsl(220 10% 15% / 0.1);
 
-    /* Sidebar Component Colors */
-    --sidebar-background: 0 0% 98%; /* Light sidebar background */
-    --sidebar-foreground: 240 5.3% 26.1%; /* Dark sidebar text */
-    --sidebar-primary: 240 5.9% 10%; /* Sidebar primary color */
-    --sidebar-primary-foreground: 0 0% 98%; /* Light text on sidebar primary */
-    --sidebar-accent: 240 4.8% 95.9%; /* Sidebar accent color */
-    --sidebar-accent-foreground: 240 5.9% 10%; /* Dark text on sidebar accent */
-    --sidebar-border: 220 13% 91%; /* Sidebar border color */
-    --sidebar-ring: 217.2 91.2% 59.8%; /* Sidebar focus ring */
+    /* Sidebar Component Colors - Sophisticated Neutrals */
+    --sidebar-background: 0 0% 99%; /* Warm off-white sidebar background */
+    --sidebar-foreground: 220 10% 25%; /* Charcoal sidebar text */
+    --sidebar-primary: 220 15% 25%; /* Navy sidebar primary color */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text on sidebar primary */
+    --sidebar-accent: 220 10% 96%; /* Light warm gray accent */
+    --sidebar-accent-foreground: 220 10% 15%; /* Charcoal text on sidebar accent */
+    --sidebar-border: 220 10% 90%; /* Light warm gray border */
+    --sidebar-ring: 220 15% 25%; /* Navy focus ring */
   }
 
   /* Dark Theme Color Scheme */

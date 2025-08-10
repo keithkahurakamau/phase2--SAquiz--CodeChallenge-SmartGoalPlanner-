@@ -40,7 +40,7 @@
       "id": "5",
       "name": "Car Maintenance",
       "targetAmount": 800,
-      "savedAmount": 600,
+      "savedAmount": 1200,
       "category": "Vehicle",
       "deadline": "2025-09-15",
       "createdAt": "2024-06-01"
@@ -80,6 +80,15 @@
       "category": "shopping",
       "deadline": "2025-09-30",
       "createdAt": "2025-08-09"
+    },
+    {
+      "id": "1754816570213",
+      "name": "birthday",
+      "targetAmount": 500000000,
+      "savedAmount": 7809859,
+      "category": "party",
+      "deadline": "2025-10-22",
+      "createdAt": "2025-08-10"
     }
   ]
 }
