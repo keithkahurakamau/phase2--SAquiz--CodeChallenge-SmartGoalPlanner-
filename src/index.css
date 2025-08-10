@@ -1,0 +1,161 @@
+/**
+ * index.css - Global Styles & Design System
+ * 
+ * This file serves as the central stylesheet for the Goalify application, containing:
+ * - Tailwind CSS directives for utility-first styling
+ * - Comprehensive design system with CSS custom properties (CSS variables)
+ * - Light and dark theme color schemes
+ * - Base component styling for consistent UI elements
+ * 
+ * Design System Overview:
+ * - Uses HSL color format for better color manipulation
+ * - Implements CSS custom properties for theme consistency
+ * - Provides both light and dark mode color schemes
+ * - Includes brand-specific tokens and status colors
+ */
+
+/* Tailwind CSS Directives - Essential for utility-first styling */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Design System Definition
+ * 
+ * All colors, gradients, fonts, and spacing tokens are defined here.
+ * Colors MUST be in HSL format for better programmatic manipulation.
+ */
+
+@layer base {
+  /* Light Theme Color Scheme */
+  :root {
+    /* Core Background & Text Colors */
+    --background: 210 100% 98%; /* Very light blue background */
+    --foreground: 222.2 84% 4.9%; /* Dark text for high contrast */
+
+    /* Card Component Colors */
+    --card: 0 0% 100%; /* White card backgrounds */
+    --card-foreground: 222.2 84% 4.9%; /* Dark text on cards */
+
+    /* Popover/Modal Colors */
+    --popover: 0 0% 100%; /* White popover backgrounds */
+    --popover-foreground: 222.2 84% 4.9%; /* Dark text in popovers */
+
+    /* Primary Action Colors */
+    --primary: 222.2 47.4% 11.2%; /* Dark blue-gray for primary actions */
+    --primary-foreground: 210 40% 98%; /* Light text on primary actions */
+
+    /* Secondary/Accent Colors */
+    --secondary: 210 40% 96.1%; /* Light gray for secondary elements */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark text on secondary */
+
+    /* Muted/Disabled State Colors */
+    --muted: 210 40% 96.1%; /* Light gray for muted elements */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Medium gray text */
+
+    /* Accent Colors for Highlights */
+    --accent: 210 40% 96.1%; /* Light gray accent */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Dark text on accents */
+
+    /* Destructive/Error Colors */
+    --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
+    --destructive-foreground: 210 40% 98%; /* Light text on destructive */
+
+    /* Border & Input Field Colors */
+    --border: 214.3 31.8% 91.4%; /* Light gray borders */
+    --input: 214.3 31.8% 91.4%; /* Light gray input backgrounds */
+    --ring: 222.2 84% 4.9%; /* Focus ring color */
+
+    /* Border Radius Tokens */
+    --radius: 0.5rem; /* Standard border radius */
+
+    /* Brand & Status Tokens */
+    --brand: 164 60% 40%; /* Teal brand color */
+    --brand-foreground: 210 40% 98%; /* Light text on brand color */
+    --success: 142 72% 33%; /* Green for success states */
+    --warning: 38 92% 50%; /* Orange for warning states */
+
+    /* Gradients & Shadow Tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--primary)) 100%);
+    --shadow-elegant: 0 10px 25px -8px hsl(var(--brand) / 0.25);
+
+    /* Sidebar Component Colors */
+    --sidebar-background: 0 0% 98%; /* Light sidebar background */
+    --sidebar-foreground: 240 5.3% 26.1%; /* Dark sidebar text */
+    --sidebar-primary: 240 5.9% 10%; /* Sidebar primary color */
+    --sidebar-primary-foreground: 0 0% 98%; /* Light text on sidebar primary */
+    --sidebar-accent: 240 4.8% 95.9%; /* Sidebar accent color */
+    --sidebar-accent-foreground: 240 5.9% 10%; /* Dark text on sidebar accent */
+    --sidebar-border: 220 13% 91%; /* Sidebar border color */
+    --sidebar-ring: 217.2 91.2% 59.8%; /* Sidebar focus ring */
+  }
+
+  /* Dark Theme Color Scheme */
+  .dark {
+    /* Core Background & Text Colors (Inverted from light theme) */
+    --background: 222.2 84% 4.9%; /* Dark background */
+    --foreground: 210 40% 98%; /* Light text */
+
+    /* Card Component Colors */
+    --card: 222.2 84% 4.9%; /* Dark card backgrounds */
+    --card-foreground: 210 40% 98%; /* Light text on cards */
+
+    /* Popover/Modal Colors */
+    --popover: 222.2 84% 4.9%; /* Dark popover backgrounds */
+    --popover-foreground: 210 40% 98%; /* Light text in popovers */
+
+    /* Primary Action Colors (Inverted) */
+    --primary: 210 40% 98%; /* Light primary actions */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Dark text on primary */
+
+    /* Secondary/Accent Colors */
+    --secondary: 217.2 32.6% 17.5%; /* Darker secondary */
+    --secondary-foreground: 210 40% 98%; /* Light text on secondary */
+
+    /* Muted/Disabled State Colors */
+    --muted: 217.2 32.6% 17.5%; /* Dark muted */
+    --muted-foreground: 215 20.2% 65.1%; /* Light gray text */
+
+    /* Accent Colors */
+    --accent: 217.2 32.6% 17.5%; /* Dark accent */
+    --accent-foreground: 210 40% 98%; /* Light text on accent */
+
+    /* Destructive/Error Colors (Dark theme variant) */
+    --destructive: 0 62.8% 30.6%; /* Darker red */
+    --destructive-foreground: 210 40% 98%; /* Light text on destructive */
+
+    /* Border & Input Field Colors (Dark theme) */
+    --border: 217.2 32.6% 17.5%; /* Dark borders */
+    --input: 217.2 32.6% 17.5%; /* Dark input backgrounds */
+    --ring: 212.7 26.8% 83.9%; /* Light focus ring */
+
+    /* Sidebar Component Colors (Dark theme) */
+    --sidebar-background: 240 5.9% 10%; /* Dark sidebar background */
+    --sidebar-foreground: 240 4.8% 95.9%; /* Light sidebar text */
+    --sidebar-primary: 224.3 76.3% 48%; /* Sidebar primary color */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text on sidebar primary */
+    --sidebar-accent: 240 3.7% 15.9%; /* Dark sidebar accent */
+    --sidebar-accent-foreground: 240 4.8% 95.9%; /* Light text on sidebar accent */
+    --sidebar-border: 240 3.7% 15.9%; /* Dark sidebar border */
+    --sidebar-ring: 217.2 91.2% 59.8%; /* Sidebar focus ring */
+  }
+}
+
+/**
+ * Base Layer Styles
+ * 
+ * These styles apply globally to all elements and provide consistent
+ * baseline styling across the application.
+ */
+
+@layer base {
+  /* Universal border color using CSS custom property */
+  * {
+    @apply border-border;
+  }
+
+  /* Body styling with theme-aware background and text colors */
+  body {
+    @apply bg-background text-foreground;
+  }
+}
